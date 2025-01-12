@@ -104,6 +104,28 @@ while(iterator.hasNext())
 	}
 }
 System.out.println("Removed list  :  "+l1);
+
+
+//second larget
+int maxx=Integer.MIN_VALUE;
+int second=0;
+for(int i=0;i<l1.size();i++)
+{
+	if(l1.get(i)>maxx)
+	{
+		maxx=l1.get(i);
+	}
+}
+System.out.println("maxx "+maxx);
+for(int i=0;i<l1.size();i++)
+{
+	if(l1.get(i)>second && l1.get(i)!=maxx)
+	{
+		second=l1.get(i);
+		
+	}
+}
+System.out.println("secondl "+second);
 l.clear();
 
 	}
@@ -116,3 +138,4 @@ l.clear();
 
 
 }
+
