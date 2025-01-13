@@ -86,6 +86,29 @@ l1.add(99);
 l1.add(10);
 
 System.out.println("Before removing list  :  "+l1);
+
+//count occourances of element
+
+
+ArrayList<String> arr=new ArrayList<>();
+arr.add("tom");
+arr.add("xom");
+arr.add("rom");
+arr.add("lom");
+arr.add("shom");
+arr.add("rom");
+arr.add("rom");
+System.out.println("occurance "+occur(arr,"rom"));
+
+
+
+
+
+
+
+
+
+//
 for(int i=0;i<l1.size();i++)
 {
 	if(l1.get(i)==2)
@@ -105,8 +128,6 @@ while(iterator.hasNext())
 }
 System.out.println("Removed list  :  "+l1);
 
-
-//second larget
 int maxx=Integer.MIN_VALUE;
 int second=0;
 for(int i=0;i<l1.size();i++)
@@ -130,6 +151,18 @@ l.clear();
 
 	}
 	
+	public static int occur(ArrayList<String> arr, String string) {
+		int count=0;
+		for(String s:arr)
+		{
+			if(s.equals(string))
+			{
+				count++;// TODO Auto-generated method stub
+			}
+		}
+		return count;
+	}
+
 	public static void reverselist(ArrayList<Integer> list)
 	{
 		Collections.reverse(list);
@@ -138,4 +171,3 @@ l.clear();
 
 
 }
-
