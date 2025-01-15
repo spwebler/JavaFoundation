@@ -1,3 +1,6 @@
+/**Arrraylist is similar to array following same indexing however is immutable in nature
+allows objects primitive dt in form of autoboxing and then stored 
+its not thread safe need**/
 package Arrays;
 import java.util.*;
 public class arraylist {
