@@ -1,6 +1,3 @@
-/**Arrraylist is similar to array following same indexing however is immutable in nature
-allows objects primitive dt in form of autoboxing and then stored 
-its not thread safe need**/
 package Arrays;
 import java.util.*;
 public class arraylist {
@@ -152,8 +149,62 @@ for(int i=0;i<l1.size();i++)
 System.out.println("secondl "+second);
 l.clear();
 
+
+/***********************marge two arraylist********************************/
+
+ArrayList<Integer> arr1=new ArrayList<>();
+arr1.add(1);
+arr1.add(3);
+arr1.add(4);
+arr1.add(5);
+arr1.add(6);
+
+ArrayList<Integer> arr2=new ArrayList<>();
+arr2.add(2);
+arr2.add(7);
+arr2.add(8);
+
+ArrayList<Integer> mergedList=mergeTwoSortedLists(arr1,arr2);
+System.out.println("merged lis"+mergedList);
+
+
+
+/*************************************************************************/
 	}
 	
+	private static ArrayList<Integer> mergeTwoSortedLists(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
+		// TODO Auto-generated method stub
+		ArrayList<Integer> mergedList=new ArrayList<>();
+		int i=0;int j=0;
+		while(i<arr1.size() && j<arr2.size()){
+			
+			if(arr1.get(i)<arr2.get(j))
+			{
+				mergedList.add(arr1.get(i));
+				i++;
+			}
+			else 
+			{
+				mergedList.add(arr2.get(j));
+				j++;
+			}
+			
+		}
+		
+		
+		while(i<arr1.size())
+		{
+			mergedList.add(arr1.get(i));
+		}
+		
+		while(j<arr2.size())
+		{
+			mergedList.add(arr2.get(j));
+			j++;
+		}
+		return mergedList;
+	}
+
 	public static int occur(ArrayList<String> arr, String string) {
 		int count=0;
 		for(String s:arr)
